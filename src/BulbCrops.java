@@ -1,6 +1,6 @@
 public class BulbCrops extends Vegetable {
-    BulbCrops(String name, int weight){
-        super(name,weight);
+    BulbCrops (String name, int weight) {
+        super (name, weight);
     }
 
     @Override
