@@ -62,7 +62,6 @@ public class Salad {
             System.out.print(" " + vegetable.getName());
     }
 
-
     public int displayCalorieFood (){
         int calorieSalad = 0;
 
@@ -72,8 +71,6 @@ public class Salad {
         System.out.print("Salad has kcal: ");
         return calorieSalad;
     }
-
-
 
    public void showIngredientsByCalories(int lowerRangeCalorie, int upperRangeCalorie){
         int calorie;
@@ -87,6 +84,4 @@ public class Salad {
                                     + " - " + vegetable.getCalorie100g() + "kcal.");
         }
    }
-
-
 }

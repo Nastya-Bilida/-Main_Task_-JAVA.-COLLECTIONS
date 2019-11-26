@@ -2,7 +2,6 @@ enum VegetableList{
     CARROT, BOW, CABBAGE,TOMATO, CUCUMBER, PEPPER,PARSLEY
 }
 
-
 public abstract class Vegetable {
     private String name;
     private int calorie100g;
