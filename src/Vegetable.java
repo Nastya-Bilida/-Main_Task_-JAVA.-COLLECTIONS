@@ -1,26 +1,26 @@
-enum VegetableList{
-    CARROT, BOW, CABBAGE,TOMATO, CUCUMBER, PEPPER,PARSLEY
+enum VegetableList {
+    CARROT, TOMATO, CUCUMBER, PEPPER
 }
 
 public abstract class Vegetable {
     private String name;
     private int calorie100g;
     private int weight;
-    private VegetableList vegetableList ;
+    private VegetableList vegetableList;
 
-    Vegetable (String name, int weight) {
+    Vegetable(String name, int weight) {
         this.name = name;
-        this.weight =weight;
+        this.weight = weight;
     }
 
-    abstract String cooking ();
+    abstract String cooking();
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
-    public int getCalorie100g () {
-        switch (vegetableList.valueOf(name)){
+    public int getCalorie100g() {
+        switch (vegetableList.valueOf(name)) {
             case CARROT:
                 calorie100g = 25;
                 break;
@@ -49,7 +49,7 @@ public abstract class Vegetable {
         return calorie100g;
     }
 
-    public int getWeight () {
+    public int getWeight() {
         return weight;
     }
 }

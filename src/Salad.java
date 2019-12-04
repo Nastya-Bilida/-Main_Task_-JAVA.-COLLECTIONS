@@ -18,16 +18,16 @@ class TypeVegetableComparator implements Comparator<Vegetable> {
 
 public class Salad {
     private String name;
-    private ArrayList<Vegetable> vegetableArrayList = new ArrayList<Vegetable> ();
+    private ArrayList<Vegetable> vegetableArrayList = new ArrayList<Vegetable>();
 
-    Salad (String name, Vegetable... ingredients) {
+    Salad(String name, Vegetable... ingredients) {
         this.name = name;
         for (Vegetable vegetable : ingredients) {
-            this.vegetableArrayList.add (vegetable);
+            this.vegetableArrayList.add(vegetable);
         }
     }
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
@@ -41,7 +41,7 @@ public class Salad {
         return this;
     }
 
-    public void showRecipe () {
+    public void showRecipe() {
         if (vegetableArrayList.isEmpty()) {
             System.out.println("You haven't added any ingredients yet!");
             return;
@@ -54,7 +54,7 @@ public class Salad {
         System.out.println(displayCalorieFood());
     }
 
-    public void sortIngredientsByClassificationVegetable () {
+    public void sortIngredientsByClassificationVegetable() {
         System.out.println("Sort ingredients :");
         Collections.sort(vegetableArrayList, new TypeVegetableComparator());
 
@@ -62,26 +62,26 @@ public class Salad {
             System.out.print(" " + vegetable.getName());
     }
 
-    public int displayCalorieFood (){
+    public int displayCalorieFood() {
         int calorieSalad = 0;
 
-        for (Vegetable vegetable : vegetableArrayList ){
-            calorieSalad += Math.round(vegetable.getWeight() * vegetable.getCalorie100g()/100);
+        for (Vegetable vegetable : vegetableArrayList) {
+            calorieSalad += Math.round(vegetable.getWeight() * vegetable.getCalorie100g() / 100);
         }
         System.out.print("Salad has kcal: ");
         return calorieSalad;
     }
 
-   public void showIngredientsByCalories(int lowerRangeCalorie, int upperRangeCalorie){
+    public void showIngredientsByCalories(int lowerRangeCalorie, int upperRangeCalorie) {
         int calorie;
         System.out.println("Range calorie: " + lowerRangeCalorie + ", " + upperRangeCalorie);
 
-        for (Vegetable vegetable : vegetableArrayList){
-            calorie = Math.round(vegetable.getWeight() * vegetable.getCalorie100g()/100);
+        for (Vegetable vegetable : vegetableArrayList) {
+            calorie = Math.round(vegetable.getWeight() * vegetable.getCalorie100g() / 100);
 
-            if ((calorie >= lowerRangeCalorie)&& (calorie <= upperRangeCalorie))
+            if ((calorie >= lowerRangeCalorie) && (calorie <= upperRangeCalorie))
                 System.out.println("Vegetable corresponding to a given calorie range: " + vegetable.getName()
-                                    + " - " + vegetable.getCalorie100g() + "kcal.");
+                        + " - " + vegetable.getCalorie100g() + "kcal.");
         }
-   }
+    }
 }

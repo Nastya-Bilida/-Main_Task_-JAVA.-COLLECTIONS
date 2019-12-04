@@ -1,10 +1,10 @@
 public class RootCrops extends Vegetable {
-    RootCrops (String name, int weight){
-        super (name,weight);
+    RootCrops(String name, int weight) {
+        super(name, weight);
     }
 
     @Override
-    String cooking () {
+    String cooking() {
         return "Root crops.";
     }
 }
